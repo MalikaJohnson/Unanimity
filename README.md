@@ -104,37 +104,16 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+> This High Fidelity Wireframe showcases the intented layout for the Unamimity app including and not limited to, the Splash page, Homescreen, both login and signup screens as well three seperate content screens.
+ 
+- https://www.figma.com/file/3JJflxZnDoftHTXsWKnda4/Unanimity?node-id=0%3A1
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+>  This section displays the structure of how the React components are being rendered. It shows the parent to child relation between my components, or in other words, show which components are rendering the other components. 
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+- https://whimsical.com/unanimity-E77qpaT95JJMxAoF72CqtF
 
 #### Component Architecture
 
@@ -172,9 +151,8 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+https://drive.google.com/file/d/1ZnOnzNBkvl3B-iRIS2nrmLKd1v3edqZC/view?usp=sharing
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
 <br>
 
 ***
