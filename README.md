@@ -90,13 +90,13 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Library      | Description                                                                                                         |
+| :--------------: | :------------------------------------------------------------------------------------------------------------------ |
+|      React       | A front-end JavaScrpit library for building UI components                                                           |
+|   React Router   | A standard library for routing components in React                                                                  |
+|      Rails       | Web-application framework which allows you to create a database using the MVC pattern                               |
+|     Bootstrap    | CSS framework directed at responsive and front-end Web Development that contains templates for interface components |
+
 
 <br>
 
@@ -117,18 +117,24 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+> This section to defines the React components and the data architecture of the Unanimity app. This is  direct reflection of how I expect the directory/file tree to look like. 
 
 ``` structure
 
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
+client
+|__ screens/
+      |__ Splashpage.jsx
+      |__ Homepage.jsx
+      |__ List.jsx
+      |__ Meditation.jsx
+      |__ ListCreate.jsx
+      |__ ListEdit.jsx
+      |__ Yoga.jsx
+      |__ Login.jsx
+      |__ Signup.jsx
+|__ layout/
       |__ Header.jsx
+      |__ Footer.jsx
 |__ services/
 
 ```
@@ -151,7 +157,7 @@ src
 
 #### ERD Model
 
-https://drive.google.com/file/d/1ZnOnzNBkvl3B-iRIS2nrmLKd1v3edqZC/view?usp=sharing
+> https://drive.google.com/file/d/1ZnOnzNBkvl3B-iRIS2nrmLKd1v3edqZC/view?usp=sharing
 
 <br>
 
