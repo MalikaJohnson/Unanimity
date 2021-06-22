@@ -116,7 +116,9 @@
 >  This section displays the structure of how the React components are being rendered. It shows the parent to child relation between my components, or in other words, show which components are rendering the other components. 
 
 - https://whimsical.com/unanimity-E77qpaT95JJMxAoF72CqtF
-![image](https://user-images.githubusercontent.com/82674469/122958093-8c529980-d350-11eb-9439-44d17e99bc26.png)
+![image](https://user-images.githubusercontent.com/82674469/122974841-c1ff7e80-d360-11eb-9398-5b190ae81965.png)
+
+
 
 
 
