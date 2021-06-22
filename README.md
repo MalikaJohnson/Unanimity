@@ -182,7 +182,7 @@ client
 ## Post-MVP
 
 >  To create a function that displays the time/ date a Gratitude List was created 
->  Add a "soft focus" Meditation component/page 
+-  Add a "soft focus" Meditation component/page 
 
 ***
 
