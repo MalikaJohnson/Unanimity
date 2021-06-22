@@ -92,7 +92,7 @@
 |      React       | A front-end JavaScrpit library for building UI components                                                           |
 |   React Router   | A standard library for routing components in React                                                                  |
 |      Rails       | Web-application framework which allows you to create a database using the MVC pattern                               |
-|     Bootstrap    | CSS framework directed at responsive and front-end Web Development that contains templates for interface components |
+
 
 
 <br>
