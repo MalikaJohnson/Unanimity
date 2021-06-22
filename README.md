@@ -20,8 +20,7 @@
 
 #### Overview
 
-_**Unanimity** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+_**Unanimity** is a full stack app with the goal of helping the user bring themselves closer to experiencing oneness within the self, by providing straightforward ways to easily incorporate daily mindfulness. 
 
 <br>
 
@@ -72,15 +71,13 @@ _**Unanimity** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus 
 - Use effective and safe branching and merging processes.
 
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
 <br>
 
 ### Goals
 
 - Successfully render all 9 screens to the DOM 
-- Successfully incorporate CRUD for the Gratitude List
-- Use CSS animation to stimulate diaphraghmic breathing for the guided breathing 
+- Successfully incorporate CRUD for the Gratitude Lists
+- Use CSS animation to stimulate diaphraghmic breathing for the guided meditation screen
 - Incorporate Bootstrap to display Carousels
 - Fully functional and deployed front and backend 
 
@@ -88,7 +85,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
+> This section lists all supporting libraries and dependencies, as well as their role in the project. 
 
 |     Library      | Description                                                                                                         |
 | :--------------: | :------------------------------------------------------------------------------------------------------------------ |
@@ -130,6 +127,7 @@ client
       |__ ListCreate.jsx
       |__ ListEdit.jsx
       |__ Yoga.jsx
+|__ components/
       |__ Login.jsx
       |__ Signup.jsx
 |__ layout/
@@ -144,30 +142,29 @@ client
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set up M/V/C        |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Set up Enpoints     |          |                |               |             | 
-| Set up Auth(backend)|          |                |               |             |
-| Seed Database       |          |                |               |             |
-| File structure      |          |                |               |             |
-| Auth(frontend)      |          |                |               |             |
-| Test endpoints      |          |                |               |             |
-| Backend Deployment  |          |                |               |             |
-| Render Splashpage   |          |                |               |             |
-| Render Homepage     |          |                |               |             |
-| Render Page 1       |          |                |               |             |
-| Render Page 2       |          |                |               |             |
-| Render Page 3       |          |                |               |             |
-| Render Login Page   |          |                |               |             |
-| Render Signup Page  |          |                |               |             |
-| Style Pages 1-3     |          |                |               |             |
-| Style Login/Signup  |          |                |               |             |
-| Style SpalshPage    |          |                |               |             |
-| Style Homepage      |          |                |               |             |
-| Media Queries       |          |                |               |             |
-| Deployment          |          |                |               |             |
-
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Set up M/V/C        |    H     |   1/2 hr       |               |             |
+| Create CRUD Actions |    H     |     2 hrs      |               |             |
+| Set up Enpoints     |    H     |     4 hrs      |               |             | 
+| Set up Auth(backend)|    H     |     2 hr       |               |             |
+| Seed Database       |    H     |     2 hrs      |               |             |
+| File structure      |    H     |   1/2 hr       |               |             |
+| Auth(frontend)      |    H     |     2 hr       |               |             |
+| Test endpoints      |    H     | 1 1/2 hrs      |               |             |
+| Backend Deployment  |    H     |   1/2 hr       |               |             |
+| Render Splashpage   |    H     |     1 hr       |               |             |
+| Render Homepage     |    H     | 1 1/2 hrs      |               |             |
+| Render Page 1       |    H     |     2 hrs      |               |             |
+| Render Page 2       |    H     |     2 hrs      |               |             |
+| Render Page 3       |    H     |     2 hrs      |               |             |
+| Render Login Page   |    H     | 1 1/2 hrs      |               |             |
+| Render Signup Page  |    H     | 1 1/2 hrs      |               |             |
+| Style Pages 1-3     |    H     |    12 hrs      |               |             |
+| Style Login/Signup  |    H     |     4 hrs      |               |             |
+| Style SplashPage    |    H     | 2 1/2 hrs      |               |             |
+| Style Homepage      |    H     | 2 1/2 hrs      |               |             |
+| Media Queries       |    H     | 1 1/2 hrs      |               |             |
+| Deployment          |    H     |   1/2 hr       |               |             |
+| TOTAL               |          |    48 hrs      |       hrs     |     TBD     |
 
 
 <br>
@@ -184,7 +181,8 @@ client
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> To create a function that displays the time/ date a Gratitude List was created 
+> Add a "soft focus" Meditation component/page 
 
 ***
 
