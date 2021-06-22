@@ -20,7 +20,7 @@
 
 #### Overview
 
-_**Unanimity** is a full stack app with the goal of helping the user bring themselves closer to experiencing oneness within the self, by providing straightforward ways to easily incorporate daily mindfulness. 
+**Unanimity** is a full stack app with the goal of helping the user bring themselves closer to experiencing oneness within the self, by providing straightforward ways to easily incorporate daily mindfulness. 
 
 <br>
 
