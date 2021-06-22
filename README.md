@@ -78,11 +78,11 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Successfully render all 9 screens to the DOM 
+- Successfully incorporate CRUD for the Gratitude List
+- Use CSS animation to stimulate diaphraghmic breathing for the guided breathing 
+- Incorporate Bootstrap to display Carousels
+- Fully functional and deployed front and backend 
 
 <br>
 
@@ -141,15 +141,34 @@ client
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Set up M/V/C        |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Set up Enpoints     |          |                |               |             | 
+| Set up Auth(backend)|          |                |               |             |
+| Seed Database       |          |                |               |             |
+| File structure      |          |                |               |             |
+| Auth(frontend)      |          |                |               |             |
+| Test endpoints      |          |                |               |             |
+| Backend Deployment  |          |                |               |             |
+| Render Splashpage   |          |                |               |             |
+| Render Homepage     |          |                |               |             |
+| Render Page 1       |          |                |               |             |
+| Render Page 2       |          |                |               |             |
+| Render Page 3       |          |                |               |             |
+| Render Login Page   |          |                |               |             |
+| Render Signup Page  |          |                |               |             |
+| Style Pages 1-3     |          |                |               |             |
+| Style Login/Signup  |          |                |               |             |
+| Style SpalshPage    |          |                |               |             |
+| Style Homepage      |          |                |               |             |
+| Media Queries       |          |                |               |             |
+| Deployment          |          |                |               |             |
+
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
