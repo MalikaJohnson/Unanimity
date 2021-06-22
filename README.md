@@ -105,12 +105,21 @@
  
 - https://www.figma.com/file/3JJflxZnDoftHTXsWKnda4/Unanimity?node-id=0%3A1
 
+![image](https://user-images.githubusercontent.com/82674469/122935899-b8fdb580-d33e-11eb-8a06-0a39fedbfcd3.png)
+![image](https://user-images.githubusercontent.com/82674469/122936003-d3379380-d33e-11eb-81e5-8f1c7dbf5655.png)
+![image](https://user-images.githubusercontent.com/82674469/122936106-e64a6380-d33e-11eb-8510-1ffb609edb3c.png)
+
+
 
 #### Component Tree
 
 >  This section displays the structure of how the React components are being rendered. It shows the parent to child relation between my components, or in other words, show which components are rendering the other components. 
 
 - https://whimsical.com/unanimity-E77qpaT95JJMxAoF72CqtF
+- ![image](https://user-images.githubusercontent.com/82674469/122936298-0a0da980-d33f-11eb-89a7-07aded97fd35.png)
+
+
+
 
 #### Component Architecture
 
@@ -174,6 +183,7 @@ client
 #### ERD Model
 
 > https://drive.google.com/file/d/1ZnOnzNBkvl3B-iRIS2nrmLKd1v3edqZC/view?usp=sharing
+> 
 
 <br>
 
