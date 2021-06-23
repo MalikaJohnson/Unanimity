@@ -1,5 +1,5 @@
 import "./App.css";
-import Layout from "./Layout/Layout";
+import Layout from "./Components/Layout";
 import Login from "./Screens/Login/Login.jsx";
 import Signup from "./Screens/Signup/Signup.jsx";
 import { Switch, Route, useHistory } from "react-router-dom";
