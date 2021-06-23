@@ -31,15 +31,15 @@ export default function Login(props) {
           type='text'
           placeholder='Username'
           name='username'
-          value={username}
-          onChange= {handleChange}
+          value={ username }
+          onChange= { handleChange }
         />
         <input
           type='text'
           placeholder='Password'
           name='password'
-          value={password}
-          onChange={handleChange}
+          value={ password }
+          onChange={ handleChange }
         />
         <button>Submit</button>
 
