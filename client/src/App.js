@@ -1,7 +1,7 @@
 import "./App.css";
-import Layout from "./layout/Layout";
-import Login from "./screens/Login";
-import Signup from "./screens/Signup";
+import Layout from "./Layout/Layout";
+import Login from "./Screens/Login/Login.jsx";
+import Signup from "./Screens/Signup/Signup.jsx";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
@@ -9,7 +9,7 @@ import {
   signUpUser,
   verifyUser,
   removeToken,
-} from "./services/auth";
+} from "./Services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -46,7 +46,7 @@ function App() {
       <Layout currenUser={currentUser} handleLogout={handleLogout}>
         <Switch>
 
-          <Route path="login">
+          <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
 
@@ -54,9 +54,9 @@ function App() {
             <Signup handleSignUp={handleSignUp} />
           </Route>
 
-          <Route path="/">
+          {/* <Route path="/">
             <MainContainer />
-          </Route>
+          </Route> */}
 
         </Switch>
       </Layout>

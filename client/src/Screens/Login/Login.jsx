@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 
 export default function Login(props) {
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
@@ -12,7 +12,7 @@ export default function Login(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setformData((prevState) => ({
+    setFormData((prevState) => ({
       ...prevState,
       [name]: value,
     }))

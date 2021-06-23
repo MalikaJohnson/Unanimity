@@ -50,8 +50,10 @@ export default function Signup(props) {
           value={ password }
           onChange={ handleChange }
         />
+        <br/>
 
-        <Link to="/signup">Already a member? Login here</Link>
+        <Link to="/login">Already a member? Login here</Link>
+        <br/>
         <button>Submit</button>
       </form>
 
