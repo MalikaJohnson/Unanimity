@@ -9,12 +9,13 @@ export default function Layout(props) {
         <h1>Unanimity</h1>
         {currentUser ? (
           <>
-            <p>{currentUser.username}</p>
             <button onClick={handleLogout}></button>
           </>
         ) : (
-            <Link to='/login'>Login</Link>
-        
+            <div>
+              <Link to='/login'>Login</Link>
+              <Link to='/sign-up'>SignUp</Link>
+            </div>
         )}
         <hr />
       </header>
