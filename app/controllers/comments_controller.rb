@@ -14,8 +14,16 @@ class CommentsController < ApplicationController
   # end
 
   # POST /users
-  def create 
-  render json: @comment
+  def create
+    @comment = Comment.new(comment_params)
+    @comment.user = @current_user
+
+    if @comment.save
+      render json: @comment, status: :created
+    else
+      render json: @comment.errors, status: :unprocessable_entity
+    end
+    
   end
 
   # PATCH/PUT /users/1
@@ -39,10 +47,8 @@ class CommentsController < ApplicationController
     # end
 
     # Only allow a list of trusted parameters through.
-    # def user_params
-    #   params.require(:user).permit(:username, :email, :password)
-    # end
-
-    # end
+    def comment_params
+      params.require(:comment).permit(:content, :list_id, :user_id)
+    end
 
 end
