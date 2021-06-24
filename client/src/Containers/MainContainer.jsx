@@ -9,7 +9,7 @@ import EditList from '../Screens/EditList/EditList';
 import Meditation from '../Screens/Meditation/Meditation';
 import Yoga from '../Screens/Yoga/Yoga';
 import { getAllComments, postComment} from '../Services/comments';
-import { getAllList, deleteList, postList, putList, getOneList} from '../Services/lists'
+import { getAllLists, deleteList, postList, putList} from '../Services/lists'
 import { verifyUser } from '../Services/auth';
 
 
@@ -17,9 +17,24 @@ export default function MainContainer() {
   const [user, setUser] = useState(null);
   const [lists, setLists] = useState([]);
   const [comments, setComments] = useState([]);
+  const history = useHistory();
 
+  useEffect(() => {
+    const fetchLists = async () => {
+      const gratList = await getAllLists();
+      setLists(gratList)
+    };
+    fetchLists();
+  })
 
-
+  useEffect(() => {
+    const fetchComments = async () => {
+      const commList = await getAllComments();
+      setComments(commList);
+    };
+    fetchComments()
+  });
+  
   useEffect(() => {
     const grabUser = async () => {
       const user = await verifyUser();
@@ -27,7 +42,35 @@ export default function MainContainer() {
     };
     grabUser();
   }, []);
-  
+
+  const handleCreate = async (formData) => {
+    const oneList = await postList(formData);
+    setLists((prevState) => [...prevState, oneList]);
+    history.push('/lists');
+  }
+
+  const handleCreateComm = async (contentData) => {
+    const oneComment = await postComment(contentData);
+    setComments((prevState) => [...prevState, oneComment]);
+    history.push('/comments');
+  }
+
+  const handleUpdate = async (id, formData) => {
+    const oneList = await putList(id, formData);
+    setLists((prevState) => 
+      prevState.map((list) => {
+        return list.id === Number(id) ? oneList : list;
+      })
+    )
+    history.push('/foods');
+  }
+
+  const handleDelete = async (id) => {
+    await deleteList(id);
+    setLists((prevState) => prevState.filter((list) => list.id !== id))
+  };
+
+
   return (
     <div className="MC">
       <Switch>
@@ -40,19 +83,19 @@ export default function MainContainer() {
         </Route>
 
         <Route exact path="/lists">
-          {user ? <IndexList user={user}/> : <Redirect to="/sign-up" />}
+          {user ? <IndexList lists={lists} user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/lists/:id">
-          {user ? <ShowList  user={user}/> : <Redirect to="/sign-up" />}
+          {user ? <ShowList handleCreateComm={handleCreateComm} comments={comments}  user={user} /> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/add-list">
-          {user ? <CreateList user={user}/> : <Redirect to="/sign-up" />}
+          {user ? <CreateList handleCreate={handleCreate} user={user}/> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/lists/:id/edit">
-          {user ? < EditList user={user}/> : <Redirect to="/sign-up" />}
+          {user ? < EditList handleUpdate={handleUpdate} handleDelete={handleDelete} handleUpdate={handleUpdate} user={user}/> : <Redirect to="/sign-up" />}
         </Route>
 
         <Route exact path="/meditation">
