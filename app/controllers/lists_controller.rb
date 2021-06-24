@@ -36,7 +36,7 @@ class ListsController < ApplicationController
     end
   end
 
-  # DELETE /users/1
+  # DELETE /list/1
   def destroy
     @list.destroy
   end
