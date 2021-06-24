@@ -1,5 +1,7 @@
 class ListsController < ApplicationController
-  
+  before_action :set_list, only: [:show, :update, :destroy, :add_list]
+  before_action :authorize_request, only: [:create, :index, :update, :show, :destroy]
+
   # GET /lists
   def index
     @lists = List.all
@@ -12,33 +14,42 @@ class ListsController < ApplicationController
     render json: @list
   end
 
+  #POST /lists
   def create
-    @list = List.new()
+    @list = List.new(list_params)
+    @list.user = @current_user
+
+    if @list.save
+      render json: @list, status: :created
+    else
+      render json: @list.errors, status: :unprocessable_entity
+    end
     
   end
 
-  # PATCH/PUT /users/1
-  # def update
-  #   if @user.update(user_params)
-  #     render json: @user
-  #   else
-  #     render json: @user.errors, status: :unprocessable_entity
-  #   end
-  # end
+  # PATCH/PUT /list/1
+  def update
+    if @list.update(list_params)
+      render json: @list
+    else
+      render json: @list.errors, status: :unprocessable_entity
+    end
+  end
 
   # DELETE /users/1
-  # def destroy
-  #   @user.destroy
-  # end
+  def destroy
+    @list.destroy
+  end
 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_user
-    #   @user = User.find(params[:id])
-    # end
+    def set_list
+      @list = List.find(params[:id])
+    end
 
     # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:username, :email, :password)
+    def list_params
+      params.require(:list).permit(:username, )
     end
 end
