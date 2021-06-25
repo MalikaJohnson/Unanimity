@@ -1,17 +1,16 @@
-import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory, Redirect } from 'react-router-dom';
-import Landing from '../Screens/Landing/Landing';
-import Homescreen from '../Screens/Homescreen/Homescreen';
-import IndexList from '../Screens/IndexList/IndexList';
-import ShowList from '../Screens/ShowList/ShowList';
-import CreateList from '../Screens/CreateList/CreateList';
-import EditList from '../Screens/EditList/EditList';
-import Meditation from '../Screens/Meditation/Meditation';
-import Yoga from '../Screens/Yoga/Yoga';
-import { getAllComments, postComment} from '../Services/comments';
-import { getAllLists, deleteList, postList, putList} from '../Services/lists'
-import { verifyUser } from '../Services/auth';
-
+import { useState, useEffect } from "react";
+import { Switch, Route, useHistory, Redirect } from "react-router-dom";
+import Landing from "../Screens/Landing/Landing";
+import Homescreen from "../Screens/Homescreen/Homescreen";
+import IndexList from "../Screens/IndexList/IndexList";
+import ShowList from "../Screens/ShowList/ShowList";
+import CreateList from "../Screens/CreateList/CreateList";
+import EditList from "../Screens/EditList/EditList";
+import Meditation from "../Screens/Meditation/Meditation";
+import Yoga from "../Screens/Yoga/Yoga";
+import { getAllComments, postComment } from "../Services/comments";
+import { getAllLists, deleteList, postList, putList } from "../Services/lists";
+import { verifyUser } from "../Services/auth";
 
 export default function MainContainer() {
   const [user, setUser] = useState(null);
@@ -22,19 +21,19 @@ export default function MainContainer() {
   useEffect(() => {
     const fetchLists = async () => {
       const gratList = await getAllLists();
-      setLists(gratList)
+      setLists(gratList);
     };
     fetchLists();
-  })
+  }, []);
 
   useEffect(() => {
     const fetchComments = async () => {
       const commList = await getAllComments();
       setComments(commList);
     };
-    fetchComments()
-  });
-  
+    fetchComments();
+  }, []);
+
   useEffect(() => {
     const grabUser = async () => {
       const user = await verifyUser();
@@ -46,67 +45,78 @@ export default function MainContainer() {
   const handleCreate = async (formData) => {
     const oneList = await postList(formData);
     setLists((prevState) => [...prevState, oneList]);
-    history.push('/lists');
-  }
+    history.push("/lists");
+  };
 
   const handleCreateComm = async (contentData) => {
     const oneComment = await postComment(contentData);
     setComments((prevState) => [...prevState, oneComment]);
-    history.push('/comments');
-  }
+    history.push("/comments");
+  };
 
   const handleUpdate = async (id, formData) => {
     const oneList = await putList(id, formData);
-    setLists((prevState) => 
+    setLists((prevState) =>
       prevState.map((list) => {
         return list.id === Number(id) ? oneList : list;
       })
-    )
-    history.push('/foods');
-  }
+    );
+    history.push("/lists");
+  };
 
   const handleDelete = async (id) => {
     await deleteList(id);
-    setLists((prevState) => prevState.filter((list) => list.id !== id))
+    setLists((prevState) => prevState.filter((list) => list.id !== id));
   };
-
 
   return (
     <div className="MC">
       <Switch>
-        <Route exact path="/">
-        <Landing />
-        </Route>
-
-        <Route exact path="/home">
-        <Homescreen />
-        </Route>
-
-        <Route exact path="/lists">
-          {user ? <IndexList lists={lists} user={user} /> : <Redirect to="/sign-up" />}
+        <Route exact path="/lists/:id/edit">
+          {user ? (
+            <EditList
+              handleUpdate={handleUpdate}
+              handleDelete={handleDelete}
+              user={user}
+            />
+          ) : (
+            <Redirect to="/sign-up" />
+          )}
         </Route>
 
         <Route exact path="/lists/:id">
-          {user ? <ShowList handleCreateComm={handleCreateComm} comments={comments}  user={user} /> : <Redirect to="/sign-up" />}
+          {user ? (
+            <ShowList
+              handleCreateComm={handleCreateComm}
+              comments={comments}
+              user={user}
+            />
+          ) : (
+            <Redirect to="/sign-up" />
+          )}
         </Route>
 
         <Route exact path="/add-list">
-          {user ? <CreateList handleCreate={handleCreate} user={user}/> : <Redirect to="/sign-up" />}
+          <CreateList handleCreate={handleCreate} user={user} />
         </Route>
 
-        <Route exact path="/lists/:id/edit">
-          {user ? < EditList handleUpdate={handleUpdate} handleDelete={handleDelete} handleUpdate={handleUpdate} user={user}/> : <Redirect to="/sign-up" />}
+        <Route exact path="/lists">
+          <IndexList lists={lists} user={user} />
         </Route>
 
         <Route exact path="/meditation">
-        <Meditation />
+          <Meditation />
         </Route>
 
         <Route exact path="/yoga">
-        <Yoga />
+          <Yoga />
         </Route>
 
+        <Route exact path="/home">
+          <Homescreen />
+        </Route>
+        
       </Switch>
     </div>
-  )
+  );
 }

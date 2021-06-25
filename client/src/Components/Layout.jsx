@@ -9,7 +9,8 @@ export default function Layout(props) {
         <h1>Unanimity</h1>
         {currentUser ? (
           <>
-            <button onClick={handleLogout}></button>
+            <p>Welcome {currentUser.username}</p>
+            <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
             <div>

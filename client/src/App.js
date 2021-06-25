@@ -2,6 +2,8 @@ import "./App.css";
 import Layout from "./Components/Layout";
 import Login from "./Screens/Login/Login.jsx";
 import Signup from "./Screens/Signup/Signup.jsx";
+import Landing from "./Screens/Landing/Landing";
+import MainContainer from "./Containers/MainContainer";
 import { Switch, Route, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
@@ -26,13 +28,13 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push("/");
+    history.push("/home");
   };
 
   const handleSignUp = async (formData) => {
     const userData = await signUpUser(formData);
     setCurrentUser(userData);
-    history.push("/");
+    history.push("/home");
   };
 
   const handleLogout = () => {
@@ -43,23 +45,25 @@ function App() {
 
   return (
     <div className="App">
-      <Layout currenUser={currentUser} handleLogout={handleLogout}>
-        <Switch>
-
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+        
+        <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
 
-          <Route path="/signup">
+          <Route path="/sign-up">
             <Signup handleSignUp={handleSignUp} />
           </Route>
 
-          {/* <Route path="/">
+          <Route path="/">
             <MainContainer />
-          </Route> */}
-
-        </Switch>
-      </Layout>
+          </Route>
+        </Layout>
+      </Switch>
     </div>
   );
 }
