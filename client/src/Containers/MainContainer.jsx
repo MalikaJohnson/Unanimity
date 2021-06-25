@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory, Redirect } from "react-router-dom";
-import Landing from "../Screens/Landing/Landing";
 import Homescreen from "../Screens/Homescreen/Homescreen";
 import IndexList from "../Screens/IndexList/IndexList";
 import ShowList from "../Screens/ShowList/ShowList";
@@ -85,15 +84,10 @@ export default function MainContainer() {
         </Route>
 
         <Route exact path="/lists/:id">
-          {user ? (
             <ShowList
               handleCreateComm={handleCreateComm}
               comments={comments}
-              user={user}
-            />
-          ) : (
-            <Redirect to="/sign-up" />
-          )}
+              user={user}/>
         </Route>
 
         <Route exact path="/add-list">

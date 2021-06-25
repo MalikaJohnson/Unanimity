@@ -49,16 +49,13 @@ function App() {
         <Route exact path="/">
           <Landing />
         </Route>
-        
-        <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/login">
             <Login handleLogin={handleLogin} />
           </Route>
-
           <Route path="/sign-up">
             <Signup handleSignUp={handleSignUp} />
           </Route>
-
+          <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/">
             <MainContainer />
           </Route>

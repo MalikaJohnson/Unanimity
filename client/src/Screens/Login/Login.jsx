@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./Login.css"
 
 
 
@@ -20,29 +21,30 @@ export default function Login(props) {
   };
 
   return (
-    <div className='login-form'>
-      <form
+    <div className="login-form">
+
+      <form className="login-data"
         onSubmit={(e) => {
           e.preventDefault();
           handleLogin(formData)
       }}
       >
-        <h1>Login</h1>
-        <input
+        <h1 className="login-header">Login</h1>
+        <input className="login-content"
           type='text'
           placeholder='Username'
           name='username'
           value={ username }
           onChange= { handleChange }
         />
-        <input
+        <input className="login-content"
           type='text'
           placeholder='Password'
           name='password'
           value={ password }
           onChange={ handleChange }
         />
-        <button>Submit</button>
+        <button className="btn">Submit</button>
 
       </form>
 

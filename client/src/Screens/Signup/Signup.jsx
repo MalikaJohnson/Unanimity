@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./Signup.css"
 
 
 export default function Signup(props) {
@@ -22,28 +23,28 @@ export default function Signup(props) {
 
   return (
     <div className='signup-form'>
-      <form
+      <form className="signup-data"
         onSubmit={(e) => {
           e.preventDefault();
           handleSignup(formData);
       }}
       >
-        <h1>Sign Up</h1>
-        <input
+        <h1 className="signup-header">Sign Up</h1>
+        <input className="signup-input"
           type='text'
           placeholder='Username'
           name='username'
           value={username}
           onChange={ handleChange }
         />
-        <input
+        <input className="signup-input"
           type='text'
           placeholder='Email'
           name='email'
           value={email}
           onChange={ handleChange }
         />
-        <input
+        <input className="signup-input"
           type='text'
           placeholder='Password'
           name='password'
@@ -52,9 +53,9 @@ export default function Signup(props) {
         />
         <br/>
 
-        <Link to="/login">Already a member? Login here</Link>
+        <Link className="link-to" to="/login">Already a member? Login here</Link>
         <br/>
-        <button>Submit</button>
+        <button className="btn">Submit</button>
       </form>
 
     </div>
