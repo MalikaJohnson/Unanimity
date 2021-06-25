@@ -11,8 +11,8 @@ import { getAllComments, postComment } from "../Services/comments";
 import { getAllLists, deleteList, postList, putList } from "../Services/lists";
 import { verifyUser } from "../Services/auth";
 
-export default function MainContainer() {
-  const [user, setUser] = useState(null);
+export default function MainContainer({currentUser}) {
+  
   const [lists, setLists] = useState([]);
   const [comments, setComments] = useState([]);
   const history = useHistory();
@@ -21,25 +21,20 @@ export default function MainContainer() {
     const fetchLists = async () => {
       const gratList = await getAllLists();
       setLists(gratList);
-    };
-    fetchLists();
-  }, []);
+    }; 
+    
+    if (currentUser) fetchLists();
+  }, [currentUser]);
 
   useEffect(() => {
     const fetchComments = async () => {
       const commList = await getAllComments();
       setComments(commList);
     };
-    fetchComments();
-  }, []);
+    if (currentUser) fetchComments();
+  }, [currentUser]);
 
-  useEffect(() => {
-    const grabUser = async () => {
-      const user = await verifyUser();
-      user ? setUser(user) : setUser(null);
-    };
-    grabUser();
-  }, []);
+  
 
   const handleCreate = async (formData) => {
     const oneList = await postList(formData);
@@ -72,11 +67,11 @@ export default function MainContainer() {
     <div className="MC">
       <Switch>
         <Route exact path="/lists/:id/edit">
-          {user ? (
+          {currentUser ? (
             <EditList
               handleUpdate={handleUpdate}
               handleDelete={handleDelete}
-              user={user}
+              currentUser={currentUser}
             />
           ) : (
             <Redirect to="/sign-up" />
@@ -87,15 +82,15 @@ export default function MainContainer() {
             <ShowList
               handleCreateComm={handleCreateComm}
               comments={comments}
-              user={user}/>
+              currentUser={currentUser}/>
         </Route>
 
         <Route exact path="/add-list">
-          <CreateList handleCreate={handleCreate} user={user} />
+          <CreateList handleCreate={handleCreate} currentUser={currentUser} />
         </Route>
 
         <Route exact path="/lists">
-          <IndexList lists={lists} user={user} />
+          <IndexList lists={lists} currentUser={currentUser} />
         </Route>
 
         <Route exact path="/meditation">

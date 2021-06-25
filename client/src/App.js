@@ -57,7 +57,7 @@ function App() {
           </Route>
           <Layout currentUser={currentUser} handleLogout={handleLogout}>
           <Route path="/">
-            <MainContainer />
+            <MainContainer currentUser={currentUser}/>
           </Route>
         </Layout>
       </Switch>
