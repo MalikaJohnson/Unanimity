@@ -11,7 +11,8 @@ class ListsController < ApplicationController
 
   # GET /lists/1
   def show
-    render json: @list, include: {comments:{include::user}}
+    render json: @list, include: :comments
+      # {include::user}}
   end
 
   #POST /lists

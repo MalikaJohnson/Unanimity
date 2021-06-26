@@ -34,10 +34,41 @@ export default function EditList(props) {
 		}));
 	};
   
-
   return (
     <div>
-      <h2>hello</h2>
+      <h3>Today I am Grateful For...</h3>
+      <form className="edit-form"
+        OnSubmit={(e) => {
+          e.preventDefault();
+          handleUpdate(id, formData);
+        }}
+      >
+        <input
+          className="edit-input1"
+          placeholder="Reason 1"
+          type="text"
+          name="input_1"
+          value={"input_1"}
+          onChange={handleChange}
+        />
+        <input
+          className="edit-input2"
+          placeholder="Reason 2"
+          type="text"
+          name="input_2"
+          value={"input_2"}
+          onChange={handleChange}
+        />
+        <input
+          className="edit-input3"
+          placeholder="Reason 3"
+          type="text"
+          name="Reason 3"
+          value={""}
+          onChange={handleChange}
+        />
+        <button className="edit-submit-btn">Submit</button>
+      </form>
     </div>
   )
 }
