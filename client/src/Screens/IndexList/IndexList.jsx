@@ -1,7 +1,7 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 export default function IndexList(props) {
-  const { lists, currentUser, handleCreate } = props
+  const { lists, currentUser } = props
   const history = useHistory()
   return (
     <div>
@@ -16,7 +16,9 @@ export default function IndexList(props) {
           
         </div>
       ))}
-      
+      <Link to= "/add-list">
+      <button>Make A New List</button>
+      </Link>
     </div>
   )
 }
