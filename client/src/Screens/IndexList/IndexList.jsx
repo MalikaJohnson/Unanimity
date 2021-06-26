@@ -7,7 +7,7 @@ export default function IndexList(props) {
     <div>
       
       {lists.map((list) => (
-        <div key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
+        <div className=""key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
           <p>{list.user.username}</p>
           <h3>Today I am Grateful For..</h3>
           <p>{list.input_1}</p>

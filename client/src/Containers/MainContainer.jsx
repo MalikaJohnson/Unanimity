@@ -1,5 +1,7 @@
+// service packages 
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory, Redirect } from "react-router-dom";
+// custom componet screens to be rendered
 import Homescreen from "../Screens/Homescreen/Homescreen";
 import IndexList from "../Screens/IndexList/IndexList";
 import ShowList from "../Screens/ShowList/ShowList";
@@ -7,6 +9,8 @@ import CreateList from "../Screens/CreateList/CreateList";
 import EditList from "../Screens/EditList/EditList";
 import Meditation from "../Screens/Meditation/Meditation";
 import Yoga from "../Screens/Yoga/Yoga";
+
+// api back end services to be import 
 import { getAllComments, postComment } from "../Services/comments";
 import { getAllLists, deleteList, postList, putList } from "../Services/lists";
 
