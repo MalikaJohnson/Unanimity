@@ -38,7 +38,7 @@ export default function Login(props) {
           onChange= { handleChange }
         />
         <input className="login-content"
-          type='text'
+          type='password'
           placeholder='Password'
           name='password'
           value={ password }

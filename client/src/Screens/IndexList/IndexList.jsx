@@ -1,16 +1,19 @@
-import { Fragment } from 'react';
+import { useHistory } from 'react-router-dom';
 
 export default function IndexList(props) {
   const { lists, currentUser, handleCreate } = props
-  console.log('lists')
+  const history = useHistory()
   return (
     <div>
       <h3>Today I am Grateful For..</h3>
       {lists.map((list) => (
-        <Fragment key={list.id}>
-          <p>{currentUser.username}</p>
-          <p>{currentUser.input_1}</p>
-        </Fragment>
+        <div key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
+          <p>{list.user.username}</p>
+          <p>{list.input_1}</p>
+          <p>{list.input_2}</p>
+          <p>{list.input_3}</p>
+          
+        </div>
       ))}
       
     </div>

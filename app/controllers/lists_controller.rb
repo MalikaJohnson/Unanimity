@@ -6,12 +6,12 @@ class ListsController < ApplicationController
   def index
     @lists = List.all
 
-    render json: @lists
+    render json: @lists, include: :user
   end
 
   # GET /lists/1
   def show
-    render json: @list
+    render json: @list, include: {comments:{include::user}}
   end
 
   #POST /lists

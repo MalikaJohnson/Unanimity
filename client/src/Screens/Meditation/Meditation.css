@@ -1,0 +1,22 @@
+/* div.breathe-pg {
+  background:#F2EFEF;
+} */
+.anim-circle {
+  margin-top: 170px;
+  color: transparent;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(188, 237, 243, 0.889);
+  animation: breathe 7s linear infinite;
+ } 
+ @keyframes breathe {
+  0% {
+    box-shadow: 0 0 0 15px rgba(188, 237, 243, 0.3), 0 0 0 30px rgba(188, 237, 243, 0.3), 0 0 0 45px rgba(188, 237, 243, 0.3), 0 0 0 60px rgba(188, 237, 243, 0.3), 0 0 0 75px rgba(188, 237, 243, 0.3);
+ }
+
+  
+ }

@@ -9,7 +9,7 @@ import Meditation from "../Screens/Meditation/Meditation";
 import Yoga from "../Screens/Yoga/Yoga";
 import { getAllComments, postComment } from "../Services/comments";
 import { getAllLists, deleteList, postList, putList } from "../Services/lists";
-import { verifyUser } from "../Services/auth";
+
 
 export default function MainContainer({currentUser}) {
   

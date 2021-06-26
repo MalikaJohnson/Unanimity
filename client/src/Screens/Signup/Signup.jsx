@@ -45,7 +45,7 @@ export default function Signup(props) {
           onChange={ handleChange }
         />
         <input className="signup-input"
-          type='text'
+          type='password'
           placeholder='Password'
           name='password'
           value={ password }
