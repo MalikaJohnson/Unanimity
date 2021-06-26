@@ -38,7 +38,7 @@ export default function CreateList(props) {
           placeholder="Reason 1"
           type="text"
           name="input_1"
-          value={"input_1"}
+          value={input_1}
           onChange={handleChange}
         />
         <input
@@ -46,15 +46,15 @@ export default function CreateList(props) {
           placeholder="Reason 2"
           type="text"
           name="input_2"
-          value={"input_2"}
+          value={input_2}
           onChange={handleChange}
         />
         <input
           className="create-input3"
           placeholder="Reason 3"
           type="text"
-          name="Reason 3"
-          value={""}
+          name="input 3"
+          value={input_3}
           onChange={handleChange}
         />
         <button className="create-submit-btn">Submit</button>

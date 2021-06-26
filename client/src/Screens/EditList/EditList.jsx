@@ -45,10 +45,10 @@ export default function EditList(props) {
       >
         <input
           className="edit-input1"
-          placeholder="Reason 1"
+          // placeholder="Reason 1"
           type="text"
           name="input_1"
-          value={"input_1"}
+          value={input_1}
           onChange={handleChange}
         />
         <input
@@ -56,7 +56,7 @@ export default function EditList(props) {
           placeholder="Reason 2"
           type="text"
           name="input_2"
-          value={"input_2"}
+          value={input_2}
           onChange={handleChange}
         />
         <input
@@ -64,7 +64,7 @@ export default function EditList(props) {
           placeholder="Reason 3"
           type="text"
           name="Reason 3"
-          value={""}
+          value={input_3}
           onChange={handleChange}
         />
         <button className="edit-submit-btn">Submit</button>

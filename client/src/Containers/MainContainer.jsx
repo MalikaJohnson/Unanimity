@@ -71,15 +71,13 @@ export default function MainContainer({currentUser}) {
     <div className="MC">
       <Switch>
         <Route exact path="/lists/:id/edit">
-          {currentUser ? (
             <EditList
               handleUpdate={handleUpdate}
               handleDelete={handleDelete}
-              currentUser={currentUser}
+            currentUser={currentUser}
+            lists={lists}
             />
-          ) : (
-            <Redirect to="/sign-up" />
-          )}
+          
         </Route>
 
         <Route exact path="/lists/:id">
