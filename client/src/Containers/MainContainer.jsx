@@ -1,6 +1,6 @@
 // service packages 
 import { useState, useEffect } from "react";
-import { Switch, Route, useHistory, Redirect } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 // custom componet screens to be rendered
 import Homescreen from "../Screens/Homescreen/Homescreen";
 import IndexList from "../Screens/IndexList/IndexList";

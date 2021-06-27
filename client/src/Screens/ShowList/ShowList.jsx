@@ -6,7 +6,7 @@ import { getOneList } from '../../Services/lists';
 export default function ShowList(props) {
   const [singleList, setSingleList] = useState(null)
 
-  const { lists, currentUser, comments } = props
+  const { lists, comments } = props
   const {id} = useParams()
   
   useEffect(() => {
@@ -19,14 +19,20 @@ export default function ShowList(props) {
 
   return (
     <div>
-      <p>1. {singleList.input_1}</p>
-      <p></p>
-      <p></p>
+      <div className='detail-list'>
+        {/* <p>{lists.user.username}</p> */}
+        <p>Today I am Grateful For ..</p>
+        <p>1. {singleList.input_1}</p>  
+      <p>2. {singleList.input_2}</p>
+      <p>3. {singleList.input_3}</p>  
+      </div>
     {singleList?.comments.map((comment) => (
-        <div className=""key={comment.id} >
-          <p>{comment.content}</p>
-        <p>- { comment.user.username}</p>
-          
+      <div className="" key={comment.id} >
+      <div className="comment-bubble">
+        <p>{comment.content}</p>
+        <p>-{comment.user.username}</p>
+        
+          </div>
         </div>
       ))}
       <Link to= {`/lists/${id}/edit`}>
