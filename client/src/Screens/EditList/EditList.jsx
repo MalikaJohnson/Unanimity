@@ -45,7 +45,6 @@ export default function EditList(props) {
       >
         <input
           className="edit-input1"
-          // placeholder="Reason 1"
           type="text"
           name="input_1"
           value={input_1}
@@ -53,7 +52,6 @@ export default function EditList(props) {
         />
         <input
           className="edit-input2"
-          placeholder="Reason 2"
           type="text"
           name="input_2"
           value={input_2}
@@ -61,7 +59,6 @@ export default function EditList(props) {
         />
         <input
           className="edit-input3"
-          placeholder="Reason 3"
           type="text"
           name="Reason 3"
           value={input_3}

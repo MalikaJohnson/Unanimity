@@ -72,8 +72,8 @@ export default function MainContainer({currentUser}) {
       <Switch>
         <Route exact path="/lists/:id/edit">
             <EditList
-              handleUpdate={handleUpdate}
-              handleDelete={handleDelete}
+            handleUpdate={handleUpdate}
+            handleDelete={handleDelete}
             currentUser={currentUser}
             lists={lists}
             />

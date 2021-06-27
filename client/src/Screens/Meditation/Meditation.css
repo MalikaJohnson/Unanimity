@@ -1,6 +1,8 @@
-/* div.breathe-pg {
-  background:#F2EFEF;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/* ---------------------------------- Breathing Animation -------------------------------------------------------------------- */
+
 .anim-circle {
   margin-top: 170px;
   color: transparent;
@@ -10,13 +12,28 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: rgba(188, 237, 243, 0.889);
+  background: rgba(243, 100, 100, 0.889);
   animation: breathe 7s linear infinite;
  } 
  @keyframes breathe {
   0% {
-    box-shadow: 0 0 0 15px rgba(188, 237, 243, 0.3), 0 0 0 30px rgba(188, 237, 243, 0.3), 0 0 0 45px rgba(188, 237, 243, 0.3), 0 0 0 60px rgba(188, 237, 243, 0.3), 0 0 0 75px rgba(188, 237, 243, 0.3);
+    box-shadow: 0 0 0 15px rgba(235, 99, 51, 0.3), 0 0 0 30px rgba(235, 99, 51, 0.3), 0 0 0 45px rgba(235, 120, 60, 0.3), 0 0 0 60px rgba(235, 120, 60, 0.3), 0 0 0 75px rgba(125, 139, 66, 0.3);
+ }
+ 50% {
+  box-shadow: 0 0 0 25px rgba(235, 99, 51, 0.3), 0 0 0 50px rgba(235, 99, 51, 0.3), 0 0 0 75px rgba(235, 120, 60, 0.3), 0 0 0 100px rgba(235, 120, 60, 0.3), 0 0 0 125px rgba(125, 139, 66, 0.3);
+ }
+ 100% {
+  box-shadow: 0 0 0 15px rgba(235, 99, 51, 0.3), 0 0 0 30px rgba(235, 99, 51, 0.3), 0 0 0 45px rgba(235, 120, 60, 0.3), 0 0 0 60px rgba(125, 139, 66, 0.3), 0 0 0 75px rgba(125, 139, 66, 0.3);
+ }
+  
  }
 
-  
+ /* ------------------------------------------------- Fonts -------------------------------------------------------------------- */
+
+ h2.breathe-intro {
+  font-family: 'Oswald', sans-serif;
+ }
+ p.breathe-explain {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
  }
