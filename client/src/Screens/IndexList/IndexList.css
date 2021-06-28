@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
+/* ------------------------------------------ Card -------------------------------------------------------- */
 
 .list-card{
-  
+  width: 650px;
   margin: 25px;
+  background-color: rgba(126, 123, 123, 0.776);
   font-size: 15px;
   border: 1px ridge gray;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: none;
@@ -16,4 +16,52 @@
 
 .list-card:hover {
   transform: scale(1.05);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------------------------------------------------- Font ----------------------------------------------------- */
+
+.link-input{
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+}
+
+.heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+
+.list-user {
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  
+}
+
+/* ---------------------------------------------------- Buttons ----------------------------------------------------------------------- */
+
+.index-btn {
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(235, 99, 51, 0.475);
+  box-shadow: 0 3px 3px -2px rgb(172, 172, 172);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  width: 250px;
+  
+}
+
+.index-btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -900px;
+  margin-left: 20px;
 }

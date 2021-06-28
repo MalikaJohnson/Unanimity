@@ -6,20 +6,24 @@ export default function IndexList(props) {
   const history = useHistory()
   return (
     <div className="list-pg">
+      <div className="list-container">
       
       {lists.map((list) => (
         <div className="list-card"key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
-          <p>{list?.user?.username}</p>
-          <h3>Today I am Grateful For..</h3>
-          <p>{list?.input_1}</p>
-          <p>{list?.input_2}</p>
-          <p>{list?.input_3}</p>
+          <p className="list-user">{list?.user?.username}</p>
+          <h3 className="heading">Today I am Grateful For..</h3>
+          <p className="link-input">{list?.input_1}</p>
+          <p className="link-input">{list?.input_2}</p>
+          <p className="link-input">{list?.input_3}</p>
           
         </div>
       ))}
+      </div>
+      <div className="btn-container">
       <Link to= "/add-list">
-      <button>Make A New List</button>
-      </Link>
+      <button className="index-btn">Make A New List</button>
+        </Link>
+        </div>
     </div>
   )
 }
