@@ -4,10 +4,10 @@ export default function Yoga() {
   
   return (
     <div>
-      <p>The art of practicing yoga helps in controlling an individual's mind, body and soul. It brings together physical and mental disciplines to achieve a peaceful body and mind;
+      <p className="yoga-content">The art of practicing yoga helps in controlling an individual's mind, body and soul. It brings together physical and mental disciplines to achieve a peaceful body and mind;
       it helps manage stress and anxiety and keeps you relaxed. It also helps in increasing flexibility,
       muscle strength and body tone. Take your time and discover which Yoga practice is best for you </p>
-      <h3>-Beginner-</h3>
+      <h3 className="title">-Beginner-</h3>
       <div className="videos">
         <iframe
         className="begin-1" 
@@ -44,7 +44,7 @@ export default function Yoga() {
         
       </iframe>
       
-      <h3>-Intermediate-</h3>
+      <h3 className="title">-Intermediate-</h3>
         <iframe
         className="inter-1"
         width="300"
@@ -79,7 +79,7 @@ export default function Yoga() {
         
       </iframe>
       
-      <h3>-Advanced-</h3>
+      <h3 className="title">-Advanced-</h3>
         <iframe
         className="adv-1"
         width="300"
