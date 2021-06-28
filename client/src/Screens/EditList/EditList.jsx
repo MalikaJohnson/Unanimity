@@ -1,4 +1,4 @@
-import {useParams, useHistory} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function EditList(props) {
@@ -18,7 +18,7 @@ export default function EditList(props) {
       setFormData({
         input_1: singleList.input_1,
         input_2: singleList.input_2,
-        input_3: singleList.input_3
+        input_3: singleList.input_3,
       })
     };
     if (lists.length) {
@@ -38,33 +38,33 @@ export default function EditList(props) {
     <div>
       <h3>Today I am Grateful For...</h3>
       <form className="edit-form"
-        OnSubmit={(e) => {
+        onSubmit={(e) => {
           e.preventDefault();
           handleUpdate(id, formData);
         }}
       >
         <input
-          className="edit-input1"
+          className="edit-input"
           type="text"
           name="input_1"
           value={input_1}
           onChange={handleChange}
         />
         <input
-          className="edit-input2"
+          className="edit-input"
           type="text"
           name="input_2"
           value={input_2}
           onChange={handleChange}
         />
         <input
-          className="edit-input3"
+          className="edit-input"
           type="text"
-          name="Reason 3"
+          name="input_3"
           value={input_3}
           onChange={handleChange}
         />
-        <button className="edit-submit-btn" onClick={() => history.push(`/lists/${list.id}`)}>Submit</button>
+        <button className="edit-submit-btn" >Submit</button>
       </form>
     </div>
   )

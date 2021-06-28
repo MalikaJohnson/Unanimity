@@ -46,10 +46,10 @@ export default function MainContainer({currentUser}) {
     history.push("/lists");
   };
 
-  const handleCreateComm = async (contentData) => {
-    const oneComment = await postComment(contentData);
+  const handleCreateComm = async (id, contentData) => {
+    const oneComment = await postComment(id, contentData);
     setComments((prevState) => [...prevState, oneComment]);
-    history.push("/comments");
+    history.push("/lists");
   };
 
   const handleUpdate = async (id, formData) => {
