@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+header {
+  background-image:linear-gradient(rgb(85, 99, 29), white)
+}
+
+img.logo {
+  display: flex;
+}
+
+.welcome {
+  font-family: 'Gabriela', serif;
+  font-size: 20px;
+  color: rgb(235,99,51);
+}
+
+.layout-login {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color:black;
+}
+
+.layout-signup {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color:black;
+}
+
+.layout-btn {
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(235, 99, 51, 0.475);
+  box-shadow: 5px, 8px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  border: none;
+  width: 300px;
+  display:flex;
+  justify-content: center;
+  align-content:flex-end
+
+}
+

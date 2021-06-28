@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import "./Layout.css"
 
 export default function Layout(props) {
   const { currentUser, handleLogout, children } = props;
@@ -6,19 +7,23 @@ export default function Layout(props) {
   
     <div>
       <header>
-        <h1>Unanimity</h1>
+        <div>
+          <Link to="/home">
+            <img className="logo" src="https://i.imgur.com/tyP9t87.png" />
+            </Link>
+        </div>
         {currentUser ? (
           <>
-            <p>Welcome {currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
+            <p className="welcome">Welcome {currentUser.username}</p>
+            <button className="layout-btn" onClick={handleLogout}>Logout</button>
           </>
+          
         ) : (
             <div>
-              <Link to='/login'>Login</Link>
-              <Link to='/sign-up'>SignUp</Link>
+              <Link className="layout-login" to='/login'>Login</Link>
+              <Link className="layout-signup" to='/sign-up'>SignUp</Link>
             </div>
         )}
-        <hr />
       </header>
       { children }
     </div>

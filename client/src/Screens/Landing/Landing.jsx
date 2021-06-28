@@ -21,4 +21,3 @@ export default function Landing() {
 
 
 
-// https://i.imgur.com/tyP9t87.png
