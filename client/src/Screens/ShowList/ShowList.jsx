@@ -20,7 +20,6 @@ export default function ShowList(props) {
   return (
     <div>
       <div className='detail-list'>
-        {/* <p>{lists.user.username}</p> */}
         <p>Today I am Grateful For ..</p>
         <p>1. {singleList.input_1}</p>  
       <p>2. {singleList.input_2}</p>

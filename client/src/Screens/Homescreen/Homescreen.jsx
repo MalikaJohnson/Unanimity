@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./Homescreen.css"
 
 export default function Homescreen() {
   
@@ -7,7 +8,7 @@ export default function Homescreen() {
   return (
     <div>
       
-        <h2>Happiness is when what you think, what you say,
+        <h2 className="home-pg"><span>Happiness</span> is when what you think, what you say,
           and what you do, are all in harmony</h2>
         
       <br />

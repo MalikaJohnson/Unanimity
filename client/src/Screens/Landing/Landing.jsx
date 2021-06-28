@@ -12,7 +12,7 @@ export default function Landing() {
       <p className='landing-content'>noun. the state or quality of being unanimous; a consensus or undivided opinion. Here at Unanimity, our goal is to bring our members closer to experiencing oneness by providing ways
         to practice mindfulness in a supportive community atmosphere</p>
       <Link to='/home'>
-       <button className='btn-landing'>Namaste</button>
+      <button className='btn-landing'>Namaste</button>
         </Link>
     </div>
   )

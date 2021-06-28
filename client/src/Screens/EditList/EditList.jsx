@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function EditList(props) {
@@ -64,7 +64,7 @@ export default function EditList(props) {
           value={input_3}
           onChange={handleChange}
         />
-        <button className="edit-submit-btn">Submit</button>
+        <button className="edit-submit-btn" onClick={() => history.push(`/lists/${list.id}`)}>Submit</button>
       </form>
     </div>
   )
