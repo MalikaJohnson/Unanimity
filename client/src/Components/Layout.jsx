@@ -15,11 +15,13 @@ export default function Layout(props) {
         {currentUser ? (
           <>
             <p className="welcome">Welcome {currentUser.username}</p>
-            <button className="layout-btn" onClick={handleLogout}>Logout</button>
+            <div className="logout">
+              <button className="layout-btn" onClick={handleLogout}>Logout</button>
+              </div>
           </>
           
         ) : (
-            <div>
+            <div className="login">
               <Link className="layout-login" to='/login'>Login</Link>
               <Link className="layout-signup" to='/sign-up'>SignUp</Link>
             </div>
