@@ -52,11 +52,14 @@
   color: rgb(0, 0, 0);
   font-size: 18px;
   width: 250px;
+  transition: 1s ease;
   
 }
 
 .index-btn:hover {
   transform: scale(1.05);
+  background:  rgb(228, 97, 49);
+  color: black;
 }
 
 .btn-container {
