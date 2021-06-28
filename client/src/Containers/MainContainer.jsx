@@ -21,12 +21,12 @@ export default function MainContainer({currentUser}) {
   const [comments, setComments] = useState([]);
   const history = useHistory();
 
+  const fetchLists = async () => {
+    const gratList = await getAllLists();
+    setLists(gratList);
+  }; 
+
   useEffect(() => {
-    const fetchLists = async () => {
-      const gratList = await getAllLists();
-      setLists(gratList);
-    }; 
-    
     if (currentUser) fetchLists();
   }, [currentUser]);
 
@@ -65,6 +65,8 @@ export default function MainContainer({currentUser}) {
   const handleDelete = async (id) => {
     await deleteList(id);
     setLists((prevState) => prevState.filter((list) => list.id !== id));
+    fetchLists()
+    history.push("/lists");
   };
 
   return (

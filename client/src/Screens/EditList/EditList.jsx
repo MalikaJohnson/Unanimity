@@ -67,8 +67,8 @@ export default function EditList(props) {
         />
         
         <button className="edit-submit-btn" >Save Edits</button>
-        <button className="delete-btn"onClick={() => handleDelete(lists?.id)}>Delete List</button>
       </form>
+        <button className="delete-btn"onClick={() => handleDelete(id)}>Delete List</button>
     </div>
   )
 }

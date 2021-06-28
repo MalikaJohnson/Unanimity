@@ -28,7 +28,7 @@ export default function CreateList(props) {
       <br />
       <h3>Today I am Grateful For...</h3>
       <form className="create-form"
-        OnSubmit={(e) => {
+        onSubmit={(e) => {
           e.preventDefault();
           handleCreate(formData);
         }}
@@ -53,7 +53,7 @@ export default function CreateList(props) {
           className="create-input3"
           placeholder="Reason 3"
           type="text"
-          name="input 3"
+          name="input_3"
           value={input_3}
           onChange={handleChange}
         />
