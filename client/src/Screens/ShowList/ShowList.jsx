@@ -22,7 +22,7 @@ export default function ShowList(props) {
     <div>
       <div className='detail-list'>
         <p>Today I am Grateful For ..</p>
-         <p>1. {singleList?.input_1}</p>   
+        <p>1. {singleList?.input_1}</p>   
       <p>2. {singleList?.input_2}</p>
       <p>3. {singleList?.input_3}</p>   
       </div>

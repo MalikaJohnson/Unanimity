@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import "./CommentPage.css"
 
 
 export default function CommentPage(props) {
@@ -22,18 +22,20 @@ export default function CommentPage(props) {
   return (
     <div>
       <form
+        className="comment-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleCreateComm(id, formData)
         }}
-        className="comment-input">
+        >
         <input
-          placeholder="comment"
+          className="comment-input"
+          placeholder="Comment"
           value={content}
           name="content"
           onChange={handleChange}
         />
-        <button>Submit</button>
+        <button className="comm-btn">Submit</button>
       </form>
     </div>
   )
