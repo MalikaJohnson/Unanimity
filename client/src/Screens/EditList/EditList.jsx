@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
+
 export default function EditList(props) {
   const [formData, setFormData] = useState({
     input_1: '',
@@ -9,7 +10,7 @@ export default function EditList(props) {
   });
 
   const { input_1, input_2, input_3 } = formData;
-  const { lists, handleUpdate } = props;
+  const { lists, handleUpdate, handleDelete } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -64,7 +65,9 @@ export default function EditList(props) {
           value={input_3}
           onChange={handleChange}
         />
-        <button className="edit-submit-btn" >Submit</button>
+        
+        <button className="edit-submit-btn" >Save Edits</button>
+        <button className="delete-btn"onClick={() => handleDelete(lists?.id)}>Delete List</button>
       </form>
     </div>
   )

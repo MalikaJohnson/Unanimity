@@ -2,8 +2,8 @@
 
 .list-card{
   
-  margin: 20px;
-  font-size: 10px;
+  margin: 25px;
+  font-size: 15px;
   border: 1px ridge gray;
   display: flex;
   flex-direction: column;
@@ -12,4 +12,8 @@
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: none;
+}
+
+.list-card:hover {
+  transform: scale(1.05);
 }
