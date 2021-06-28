@@ -23,13 +23,17 @@ a {
   border: 1px ridge gray;
   display: flex;
   flex-flow: row-wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: none;
 }
+.meditation-card:hover{
+  transform: scale(1.05);
+}
+
 .meditation-img {
   width: 240px;
   box-shadow: 0 3px 3px -2px gray;
@@ -37,7 +41,7 @@ a {
   border-bottom: none;
 }
 
-.meditation-content {
+.meditation-blurb {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   color:white;
@@ -52,22 +56,25 @@ a {
   border: 1px ridge gray;
   display: flex;
   flex-flow: row-wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: none;
 }
-
+.grat-list-card:hover{
+  transform: scale(1.05);
+}
 .grat-list-img {
-  width: 240px;
+  height: 279px;
+  width: 242px;
   box-shadow: 0 3px 3px -2px gray;
   border: 1px ridge gray;
   border-bottom: none;
 }
 
-.grat-list-content {
+.grat-list-blurb {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   color:white;
@@ -83,23 +90,33 @@ a {
   border: 1px ridge gray;
   display: flex;
   flex-flow: row-wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: none;
 }
+.yoga-card:hover{
+  transform: scale(1.05);
+}
 
 .yoga-img {
-  width: 240px;
+  height: 279px;
+  width: 242px;
   box-shadow: 0 3px 3px -2px gray;
   border: 1px ridge gray;
   border-bottom: none;
 }
 
-.yoga-content {
+.yoga-blurb {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   color:white;
+}
+
+.container {
+  display:flex;
+  justify-content:center;
+  justify-content: space-evenly;
 }
