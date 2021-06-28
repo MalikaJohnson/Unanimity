@@ -29,7 +29,7 @@ export default function Homescreen() {
       <div className="yoga-card">
         <Link to="yoga">
         <img className="yoga-img"src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="woman doing yoga" />
-        <p className="">Yoga</p>
+        <p className="yoga-content">Yoga</p>
         </Link>
       </div>
       

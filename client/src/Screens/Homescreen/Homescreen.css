@@ -8,13 +8,21 @@
 span {
   color: rgba(235,99,51);
 }
+a {
+  text-decoration: none;
+}
+
+/* -------------------------------------------- Meditation ---------------------------------------------------------------- */
 
 .meditation-card {
   width: 240px;
   margin: 20px;
+  text-decoration: none;
+  background-color: rgba(14, 13, 13, 0.666) ;
   font-size: 10px;
   border: 1px ridge gray;
   display: flex;
+  flex-flow: row-wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -29,12 +37,21 @@ span {
   border-bottom: none;
 }
 
+.meditation-content {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color:white;
+}
+
+/*  ---------------------------------------------- Gratitude List ---------------------------------------------------------- */
+
 .grat-list-card {
   width: 240px;
   margin: 20px;
-  font-size: 10px;
+  background-color: rgba(14, 13, 13, 0.666) ;
   border: 1px ridge gray;
   display: flex;
+  flex-flow: row-wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -50,13 +67,22 @@ span {
   border-bottom: none;
 }
 
+.grat-list-content {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color:white;
+}
+
+/* ------------------------------------------------ Yoga --------------------------------------------------------------- */
+
 .yoga-card {
   width: 240px;
   margin: 20px;
-  background-color:rgba(82, 80, 80, 0.44);
+  background-color: rgba(14, 13, 13, 0.666) ;
   font-size: 10px;
   border: 1px ridge gray;
   display: flex;
+  flex-flow: row-wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -70,4 +96,10 @@ span {
   box-shadow: 0 3px 3px -2px gray;
   border: 1px ridge gray;
   border-bottom: none;
+}
+
+.yoga-content {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color:white;
 }
