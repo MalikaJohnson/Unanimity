@@ -5,6 +5,7 @@
   font-family: 'Oswald', sans-serif;
   width: 50%;
   overflow-y: scroll;
+  margin-bottom:50px;
 }
 
 .comm-btn {

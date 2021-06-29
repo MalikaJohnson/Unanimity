@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+ /* -------------------------------------------- Comments Bubble ---------------------------------------------- */
+
+.comment-bubble {
+  box-shadow: 0 3px 3px 2px gray;
+  background-color: rgba(126, 123, 123, 0.776);
+  border-radius: 10%;
+  width: 400px;
+ margin-bottom:20px
+  
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+/* ------------------------------------------------- Button ------------------------------------------------------------------ */
+.show-edit-btn {
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(235, 99, 51, 0.475);
+  box-shadow: 0 3px 3px -2px rgb(172, 172, 172);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  width: 250px;
+  transition: 1s ease;
+}
+
+.show-edit-btn:hover {
+  transform: scale(1.05);
+  background:  rgb(228, 97, 49);
+  color: black;
+}
+.edit-btn-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -400px;
+  margin-left: 20px;
+}
+
+/* ------------------------------------------------- Fonts --------------------------------------------------------------------------------- */
+
+.show-input {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+.detail-list{
+  margin-bottom: 50px;
+}
+
+.show-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+}
