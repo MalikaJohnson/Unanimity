@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/*-------------------------------------------- Form ----------------------------------------------------------------*/
+
+.create-input {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  width: 400px;
+  margin-top: 20px;
+  background-color: rgba(240, 233, 233, 0.925);
+  height: 40px;
+  border: none;
+  color: rgb(6, 6, 6);
+  padding: 0 10px;
+  overflow-y: scroll;
+}
+
+.create-form {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+/* --------------------------------------------- Button -------------------------------------------------------------------- */
+
+.create-submit-btn {
+  font-family: 'Oswald', sans-serif;
+  background-color: rgba(235, 99, 51, 0.475);
+  box-shadow: 0 3px 3px -2px rgb(172, 172, 172);
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  width: 250px;
+  transition: 1s ease;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.create-submit-btn:hover {
+  transform: scale(1.05);
+  background:  rgb(228, 97, 49);
+  color: black;
+}
+
+/* ----------------------------------------------- Fonts --------------------------------------------------------------------------------- */
+
+.create-content {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.create-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+}

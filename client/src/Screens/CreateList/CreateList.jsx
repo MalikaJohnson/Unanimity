@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './CreateList.css'
 
 export default function CreateList(props) {
   const [formData, setFormData] = useState({
@@ -22,11 +23,11 @@ export default function CreateList(props) {
 
   return (
     <div className="create-body">
-      <p>Practicing gratitude can be a game-changer: it has far reaching effects, from improving our mental health to boosting our relationships with others. Living your life with gratitude helps you notice the little wins. Each of these small moments strings together to create a web of well-being that,
+      <p className="create-content">Practicing gratitude can be a game-changer: it has far reaching effects, from improving our mental health to boosting our relationships with others. Living your life with gratitude helps you notice the little wins. Each of these small moments strings together to create a web of well-being that,
         over time, strengthens your ability to notice the good. Recalling moments of gratitude associated with ordinary events, your personal attributes, or valued people in your life gives you the potential to interweave a sustainable theme of gratefulness into your life. Use this to track your daily reasons to be greatful.</p>
       
       <br />
-      <h3>Today I am Grateful For...</h3>
+      <h3 className='create-header'>Today I am Grateful For...</h3>
       <form className="create-form"
         onSubmit={(e) => {
           e.preventDefault();
@@ -34,7 +35,7 @@ export default function CreateList(props) {
         }}
       >
         <input
-          className="create-input1"
+          className="create-input"
           placeholder="Reason 1"
           type="text"
           name="input_1"
@@ -42,7 +43,7 @@ export default function CreateList(props) {
           onChange={handleChange}
         />
         <input
-          className="create-input2"
+          className="create-input"
           placeholder="Reason 2"
           type="text"
           name="input_2"
@@ -50,7 +51,7 @@ export default function CreateList(props) {
           onChange={handleChange}
         />
         <input
-          className="create-input3"
+          className="create-input"
           placeholder="Reason 3"
           type="text"
           name="input_3"

@@ -6,6 +6,12 @@
   width: 50%;
   overflow-y: scroll;
   margin-bottom:50px;
+  margin-top: 20px;
+  background-color: rgba(240, 233, 233, 0.925);
+  height: 40px;
+  border: none;
+  color: rgb(6, 6, 6);
+  padding: 0 10px;
 }
 
 .comm-btn {

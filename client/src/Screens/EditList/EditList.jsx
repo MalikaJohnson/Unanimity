@@ -1,5 +1,6 @@
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import "./EditList.css"
 
 
 export default function EditList(props) {
@@ -38,6 +39,7 @@ export default function EditList(props) {
   return (
     <div>
       <h3>Today I am Grateful For...</h3>
+      <div className="edit-form-container">
       <form className="edit-form"
         onSubmit={(e) => {
           e.preventDefault();
@@ -65,10 +67,14 @@ export default function EditList(props) {
           value={input_3}
           onChange={handleChange}
         />
+        <div className="edit-btn-contain">
+        <button className="edit-submit-btn">Save Edits</button>
         
-        <button className="edit-submit-btn" >Save Edits</button>
-      </form>
-        <button className="delete-btn"onClick={() => handleDelete(id)}>Delete List</button>
+      
+        <button className="delete-btn" onClick={() => handleDelete(id)}>Delete List</button>
+      </div>
+        </form>
+        </div>
     </div>
   )
 }
