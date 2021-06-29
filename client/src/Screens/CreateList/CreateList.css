@@ -60,3 +60,19 @@ h3.create-form-header {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .create-input {
+    font-size: 15px;
+    width: 300px;
+    margin-top: 20px;
+    background-color: rgba(240, 233, 233, 0.925);
+    height: 30px;
+    border: none;
+    color: rgb(6, 6, 6);
+    padding: 0 10px;
+  }
+  .create-content {
+    font-size: 15px;
+  }
+}
