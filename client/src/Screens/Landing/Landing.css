@@ -67,4 +67,12 @@ img.landing-img {
  width: 90px;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  img.landing-img {
+    width: 60%;
+  }
+  .pronounce {
+    color: transparent;
+  }
+}
 
