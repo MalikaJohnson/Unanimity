@@ -57,3 +57,10 @@
   font-family: 'Oswald', sans-serif;
   font-size: 35px;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .show-edit-btn{
+    margin-top:370px;
+    margin-left:35px;
+  }
+}
