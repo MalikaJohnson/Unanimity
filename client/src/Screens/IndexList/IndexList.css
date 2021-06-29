@@ -68,3 +68,10 @@
   margin-top: -900px;
   margin-left: 20px;
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .btn-container {
+    margin-top: -20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
