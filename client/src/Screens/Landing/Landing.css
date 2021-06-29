@@ -32,11 +32,16 @@
   font-family: 'Gabriela', serif;
   font-size: 30px;
   position:absolute;
-  bottom: 40%;
+  bottom: 35%;
   display: flex;
   justify-content: center;
 }
 
+.blurb {
+  display: flex;
+  justify-content: center;
+  
+}
 
 
 img.landing-img {
@@ -50,14 +55,16 @@ img.landing-img {
 
 .btn-landing {
  display:flex;
- margin-top: 200px;
+ margin-top: 300px;
  position: absolute;
  right: 50%;
  font-family: 'Oswald', sans-serif;
  background-color: rgba(235, 99, 51, 0.475);
- box-shadow: 5px, 8px;
+ box-shadow: 0 3px 3px -2px rgb(7, 7, 7);
  color: rgb(0, 0, 0);
  font-size: 18px;
  border: none;
  width: 90px;
 }
+
+
