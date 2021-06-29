@@ -27,7 +27,7 @@ export default function CreateList(props) {
         over time, strengthens your ability to notice the good. Recalling moments of gratitude associated with ordinary events, your personal attributes, or valued people in your life gives you the potential to interweave a sustainable theme of gratefulness into your life. Use this to track your daily reasons to be greatful.</p>
       
       <br />
-      <h3 className='create-header'>Today I am Grateful For...</h3>
+      <h3 className="create-form-header">Today I am Grateful For...</h3>
       <form className="create-form"
         onSubmit={(e) => {
           e.preventDefault();
