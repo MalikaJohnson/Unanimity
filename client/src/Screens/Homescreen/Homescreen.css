@@ -120,3 +120,11 @@ a {
   justify-content:center;
   justify-content: space-evenly;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
