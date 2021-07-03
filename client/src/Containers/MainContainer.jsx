@@ -1,5 +1,5 @@
 // service packages 
-import { useState, useEffect, Redirect } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 // custom componet screens to be rendered
 import Homescreen from "../Screens/Homescreen/Homescreen";
@@ -94,7 +94,7 @@ export default function MainContainer({currentUser}) {
         </Route>
 
         <Route exact path="/lists">
-         { user ? <IndexList lists={lists} currentUser={currentUser} /> : <Redirect to="/sign-up"/>}
+        <IndexList lists={lists} currentUser={currentUser} /> 
         </Route>
 
         <Route exact path="/meditation">

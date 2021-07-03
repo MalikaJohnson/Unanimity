@@ -1,4 +1,4 @@
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, Redirect } from 'react-router-dom';
 import './IndexList.css'
 
 export default function IndexList(props) {
@@ -7,7 +7,8 @@ export default function IndexList(props) {
   return (
     <div className="list-pg">
       <div className="list-container">
-      
+        {!currentUser && <Redirect to="/sign-up" />}
+        
       {lists.map((list) => (
         <div className="list-card"key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
           <p className="list-user">{list?.user?.username}</p>
