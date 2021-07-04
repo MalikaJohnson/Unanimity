@@ -22,6 +22,8 @@
 
 **Unanimity** is a full stack app with the goal of helping the user bring themselves closer to experiencing oneness within the self, by providing straightforward ways to easily incorporate daily mindfulness. 
 
+https://join-unanimity.netlify.app/
+
 <br>
 
 #### MVP
