@@ -154,29 +154,29 @@ client
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set up M/V/C        |    H     |   1/2 hr       |               |             |
-| Create CRUD Actions |    H     |     2 hrs      |               |             |
-| Set up Enpoints     |    H     |     4 hrs      |               |             | 
-| Set up Auth(backend)|    H     |     2 hr       |               |             |
-| Seed Database       |    H     |     2 hrs      |               |             |
-| File structure      |    H     |   1/2 hr       |               |             |
-| Auth(frontend)      |    H     |     2 hr       |               |             |
-| Test endpoints      |    H     | 1 1/2 hrs      |               |             |
-| Backend Deployment  |    H     |   1/2 hr       |               |             |
-| Render Splashpage   |    H     |     1 hr       |               |             |
-| Render Homepage     |    H     | 1 1/2 hrs      |               |             |
-| Render Page 1       |    H     |     2 hrs      |               |             |
-| Render Page 2       |    H     |     2 hrs      |               |             |
-| Render Page 3       |    H     |     2 hrs      |               |             |
-| Render Login Page   |    H     | 1 1/2 hrs      |               |             |
-| Render Signup Page  |    H     | 1 1/2 hrs      |               |             |
-| Style Pages 1-3     |    H     |    12 hrs      |               |             |
-| Style Login/Signup  |    H     |     4 hrs      |               |             |
-| Style SplashPage    |    H     | 2 1/2 hrs      |               |             |
-| Style Homepage      |    H     | 2 1/2 hrs      |               |             |
-| Media Queries       |    H     | 1 1/2 hrs      |               |             |
-| Deployment          |    H     |   1/2 hr       |               |             |
-| TOTAL               |          |    48 hrs      |       hrs     |     TBD     |
+| Set up M/V/C        |    H     |   1/2 hr       |  1 1/2 hrs    | 1 1/2 hrs   |
+| Create CRUD Actions |    H     |     2 hrs      |      5 hrs    |     5 hrs   |
+| Set up Enpoints     |    H     |     4 hrs      |      4 hrs    |     4 hrs   | 
+| Set up Auth(backend)|    H     |     2 hr       |  1 1/2 hrs    | 1 1/2 hrs   |
+| Seed Database       |    H     |     2 hrs      |    1/2 hr     |   1/2 hr    |
+| File structure      |    H     |   1/2 hr       |    1/2 hr     |   1/2 hr    |
+| Auth(frontend)      |    H     |     2 hr       |      2 hrs    |     2 hrs   |
+| Test endpoints      |    H     | 1 1/2 hrs      |  2 1/2 hrs    | 2 1/2 hrs   |
+| Backend Deployment  |    H     |   1/2 hr       |    1/2 hr     |   1/2 hr    |
+| Render Splashpage   |    H     |     1 hr       |     1  hr     |     1 hr    |
+| Render Homepage     |    H     | 1 1/2 hrs      |     1  hr     |     1 hr    |
+| Render Page 1       |    H     |     2 hrs      |     1  hr     |     1 hr    |
+| Render Page 2       |    H     |     2 hrs      |     1  hr     |     1 hr    |
+| Render Page 3       |    H     |     2 hrs      |     1  hr     |     1 hr    |
+| Render Login Page   |    H     | 1 1/2 hrs      |     1  hr     |     1 hr    |
+| Render Signup Page  |    H     | 1 1/2 hrs      |     1  hr     |     1 hr    |
+| Style Pages 1-3     |    H     |    12 hrs      |     4  hrs    |     4 hrs   |
+| Style Login/Signup  |    H     |     4 hrs      |     2  hr     |     2 hr    |
+| Style SplashPage    |    H     | 2 1/2 hrs      |     2 hrs     |     2 hrs   |
+| Style Homepage      |    H     | 2 1/2 hrs      |     1  hr     |     1 hr    |
+| Media Queries       |    H     | 1 1/2 hrs      |  1 1/2 hr     | 1 1/2 hr    |
+| Deployment          |    H     |   1/2 hr       |    1/2 hr     |   1/2 hr    |
+| TOTAL               |          |    48 hrs      |    42  hrs    |    42 hrs   |
 
 
 <br>
@@ -201,8 +201,35 @@ client
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+>  This code snippet is one that I am proud of due to the fact that this map function calls on the input of each list as well as the comments attached. It is something I am proud of because while working through the code I realized due to the information I was calling I didnt need todo a map function for list since I had already mapped through the comments.
+
+```
+ <div className='detail-list'>
+        <p className="show-header">Today I am Grateful For ..</p>
+        <p className="show-input">1. {singleList?.input_1}</p>   
+      <p className="show-input">2. {singleList?.input_2}</p>
+      <p className="show-input">3. {singleList?.input_3}</p>   
+      </div>
+    {singleList?.comments.map((comment) => (
+      <div className="comment-container" key={comment.id} >
+      <div className="comment-bubble">
+        <p>{comment.content}</p>
+        <p>-{comment.user.username}</p>
+        
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> This code snippet was an issue due to the fact that
+```
+{lists.map((list) => (
+        <div className="list-card"key={list.id} onClick={() => history.push(`/lists/${list.id}`)}>
+          <p className="list-user">{list?.user?.username}</p>
+          <h3 className="heading">Today I am Grateful For..</h3>
+          <p className="link-input">{list?.input_1}</p>
+          <p className="link-input">{list?.input_2}</p>
+          <p className="link-input">{list?.input_3}</p>
+          
+        </div>
+      ))}
+```
