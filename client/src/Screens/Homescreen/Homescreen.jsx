@@ -8,8 +8,8 @@ export default function Homescreen() {
   return (
     <div>
       
-        <h2 className="home-pg"><span>Happiness</span> is when what you think, what you say,
-          and what you do, are all in harmony</h2>
+        <h2 className="home-pg"><span>Happiness</span> is when what you think,</h2> <h2 className="home-pg">what you say,
+          and what you do, are all</h2><h2 className="home-pg">in harmony</h2>
         
       <br />
       <div className="container">

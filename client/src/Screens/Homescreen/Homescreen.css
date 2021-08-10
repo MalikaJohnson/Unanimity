@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Oswald:wght@200&display=swap');
 
 .home-pg {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Gabriela', serif;
+  letter-spacing: 2px;
 }
 
 span {
