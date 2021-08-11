@@ -40,6 +40,12 @@ img.landing-img {
   display: flex;
   justify-content: center;
   padding-top: 70px;
+  transition: 1s ease;
+}
+.btn-landing:hover {
+  transform: scale(1.05);
+  background:  rgb(228, 97, 49);
+  color: black;
 }
 
 .btn-landing {
