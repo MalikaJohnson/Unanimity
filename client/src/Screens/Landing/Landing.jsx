@@ -7,10 +7,9 @@ export default function Landing() {
 
   return (
     <div className="landing">
+      <div classNam="img-blurb">
       <img className="landing-img" src="https://i.imgur.com/OMKJKez.png" alt="logo" />
-      <div className="blurb">
-      <h3 className="pronounce">Yoo-nuh-ni-muh-tee</h3>
-      <p className='landing-content'>noun. the state or quality of being unanimous; a consensus or undivided opinion. Here at Unanimity, our goal is to bring our members closer to experiencing oneness by providing ways
+      <p className='landing-content'>Here at Unanimity, our goal is to bring our members closer to experiencing oneness by providing ways
         to practice mindfulness in a supportive community atmosphere</p>
       </div>
       <div className='landing-btn'>

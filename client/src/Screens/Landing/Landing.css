@@ -17,51 +17,39 @@
 .landing-content {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
-  position: absolute;
-  left: 5%;
-  bottom: 10%;
-  width: 90%;
+  font-weight: bold;
+  width: 70%;
   text-align: left;
   letter-spacing: 2px;
-  margin-top: 20px;
+  margin-top: -100px;
   margin-bottom:50px;
-  
+  padding-left: 200px;
+  padding-right: 50px;
 }
-
-.pronounce {
-  font-family: 'Gabriela', serif;
-  font-size: 30px;
-  position:absolute;
-  bottom: 35%;
-  display: flex;
-  justify-content: center;
-}
-
-.blurb {
-  display: flex;
-  justify-content: center;
-  
-}
-
 
 img.landing-img {
   width: 30%;
   height: 50%;
   display: flex;
   justify-content: flex-start;
-  margin-left: 50px;
+  margin-left: 150px;
+  padding-top: 100px;
   
+}
+.landing-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
 }
 
 .btn-landing {
  display:flex;
- margin-top: 300px;
- position: absolute;
- right: 50%;
+ justify-content: center;
  font-family: 'Oswald', sans-serif;
+ letter-spacing: 1px;
  background-color: rgba(235, 99, 51, 0.475);
  box-shadow: 0 3px 3px -2px rgb(7, 7, 7);
- color: rgb(0, 0, 0);
+ color: rgb(250, 246, 246);
  font-size: 18px;
  border: none;
  width: 90px;
@@ -70,9 +58,14 @@ img.landing-img {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   img.landing-img {
     width: 60%;
+    margin: auto;
   }
-  .pronounce {
-    color: transparent;
+  p.landing-content {
+  padding-left: 70px;
+  padding-top: 70px;
   }
+ .landing-btn {
+   padding-top: 40px;
+ }
 }
 
